@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModelPredict">
+
+    <ImageView
+        android:id="@+id/mpreviewFlower"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <TextView
+        android:id="@+id/labeltop1"
+        android:layout_width="165dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/probtop1"
+        app:layout_constraintHorizontal_bias="0.684"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mpreviewFlower" />
+
+    <TextView
+        android:id="@+id/probtop1"
+        android:layout_width="117dp"
+        android:layout_height="144dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mpreviewFlower" />
+
+    <Button
+        android:id="@+id/addFlower"
+        android:layout_width="379dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="164dp"
+        android:text="Add Flower"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mpreviewFlower" />
+
+    <Button
+        android:id="@+id/backToStart"
+        android:layout_width="379dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="216dp"
+        android:text="Identify New Flower"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mpreviewFlower" />
+
+<!--    <GridView-->
+<!--        android:id="@+id/probabilityGrid"-->
+<!--        android:layout_width="370dp"-->
+<!--        android:layout_height="139dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.487"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/mpreviewFlower"-->
+<!--        android:numColumns="3"/>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

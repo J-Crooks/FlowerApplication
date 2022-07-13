@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/cameraFrag">
+
+    <fragment
+        android:id="@+id/cameraFrag"
+        android:name="com.example.flowerapplication.PhotoRetrieval"
+        android:label="Identify"
+        tools:layout="@layout/fragment_photo_retrieval" >
+        <action
+            android:id="@+id/action_cameraFrag_to_checkPhoto"
+            app:destination="@id/checkPhoto" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/flowerFrag"
+        android:name="com.example.flowerapplication.FlowerCollection"
+        android:label="My Flowers"
+        tools:layout="@layout/fragment_flower_collection" />
+    <fragment
+        android:id="@+id/checkPhoto"
+        android:name="com.example.flowerapplication.PhotoCheck"
+        android:label="Check Photo"
+        tools:layout="@layout/fragment_photo_check" >
+        <action
+            android:id="@+id/action_checkPhoto_to_modelpredictFrag"
+            app:destination="@id/modelpredictFrag" />
+        <argument
+            android:name="endcodedBitmap"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/modelpredictFrag"
+        android:name="com.example.flowerapplication.ModelPredict"
+        android:label="fragment_modelpredict"
+        tools:layout="@layout/fragment_model_predict" />
+
+</navigation>
